@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/darker_gray"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/fromcamerabtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@android:color/white"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/takephotos"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/localimagesbtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/white"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/localimage"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/cancleadding"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="@string/cancle"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

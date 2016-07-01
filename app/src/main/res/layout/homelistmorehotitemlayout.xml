@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="100dp"
+    android:background="@android:color/background_light"
+    android:descendantFocusability="blocksDescendants"
+     >
+	<TextView 
+    	android:id="@+id/tipcontent"
+    	android:focusable="false"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:textSize="@dimen/homeitemcontentsize"
+    	android:background="#00000000"
+    	android:paddingTop="5dp"
+    	android:layout_marginBottom="45dp"
+    	android:paddingLeft="10dp"
+    	android:paddingRight="10dp"
+    	/>
+	<TextView
+	    android:id="@+id/publishplace"
+	    android:layout_height="wrap_content"
+	    android:layout_width="fill_parent"
+	    android:layout_below="@id/tipcontent"
+	    android:textSize="12sp"
+	    android:textColor="@android:color/darker_gray"
+	    android:gravity="bottom"
+	    android:paddingLeft="10dp"
+	    android:paddingTop="3dp"
+	    android:focusable="false"
+	    />
+	
+	<!-- 最下面的四个按钮 -->
+	<LinearLayout
+	    android:id="@+id/fourbtnlinearlayout"
+	    android:layout_height="wrap_content"
+	    android:layout_width="fill_parent"
+	    android:orientation="horizontal"
+	    android:layout_below="@id/publishplace"
+	    android:gravity="bottom"
+	    >
+	    
+	    <LinearLayout
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="fill_parent"
+	        android:orientation="horizontal">
+	        <!-- 左边4个控件 -->
+	        <RelativeLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent">
+	            <LinearLayout 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:orientation="horizontal">
+	                <ImageView 
+		                android:id="@+id/pub_timeimg"
+						android:src="@drawable/home_icon1"
+						android:scaleType="center"
+						android:paddingLeft="10dp"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"/>
+	            	<TextView 
+				        android:id="@+id/pub_timetxv"
+				        android:layout_width="wrap_content"
+				        android:paddingLeft="5dp"
+				        android:layout_height="wrap_content"
+				        android:textSize="@dimen/homeitemsubtextsize"
+	        		/>
+	            </LinearLayout>
+	            <RelativeLayout 
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:orientation="horizontal"
+	                android:layout_alignParentRight="true">
+	            	<TextView 
+			        	android:id="@+id/replynumtv"
+			        	android:layout_height="wrap_content"
+			       	 	android:layout_width="wrap_content"
+			        	android:textSize="@dimen/homeitemsubtextsize"/>
+	                <ImageView 
+			        android:id="@+id/replyimage"
+			        android:layout_height="wrap_content"
+			        android:layout_width="wrap_content"
+			        android:layout_toLeftOf="@id/replynumtv"
+			        android:src="@drawable/home_icon2"/>
+	            
+	            </RelativeLayout>
+	            
+	        </RelativeLayout>
+	    </LinearLayout>
+
+	    <LinearLayout 
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:orientation="horizontal"
+	        android:layout_height="fill_parent">
+	        
+	        <!-- 右边四个控件 -->
+	        <RelativeLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent">
+	            <RelativeLayout 
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:orientation="horizontal"
+	                android:layout_alignParentLeft="true">
+	                <ImageButton 
+				        android:id="@+id/topbtn"
+				        android:layout_height="fill_parent"
+				        android:layout_width="wrap_content"
+				        android:scaleType="fitStart"
+				        android:paddingLeft="35dp"
+				        android:paddingRight="5dp"
+				        android:background="#00000000"
+				        android:focusable="false"
+				        android:src="@drawable/home_icon3"/>
+				    <TextView 
+				        android:id="@+id/topcounttv"
+				        android:layout_toRightOf="@id/topbtn"
+				        android:layout_height="wrap_content"
+				        android:layout_width="wrap_content"/>
+				    
+	            </RelativeLayout>
+	            <RelativeLayout 
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:orientation="horizontal"
+	                android:layout_alignParentRight="true">
+	                <ImageButton
+				        android:id="@+id/downbtn"
+				        android:layout_height="fill_parent"
+				        android:layout_width="wrap_content"
+				        android:scaleType="fitCenter"
+				        android:paddingRight="5dp"
+				        android:background="#00000000"
+				        android:focusable="false"
+				        android:src="@drawable/home_icon4"/>
+		    
+				    <TextView 
+				        android:id="@+id/downcounttv"
+				        android:layout_height="wrap_content"
+				        android:layout_width="wrap_content"
+				        android:gravity="top"
+				        android:layout_toRightOf="@id/downbtn"
+				        android:paddingRight="20dp"
+				        android:textSize="@dimen/homeitemsubtextsize"/>
+	            </RelativeLayout>
+	        </RelativeLayout>
+	        
+	    </LinearLayout>
+	    
+	</LinearLayout>
+<!-- 
+	<TextView 
+	    android:id="@+id/morehot"
+	    android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_below="@id/fourbtnlinearlayout"
+	    android:text="@string/morehottips"
+	    android:textSize="@dimen/homeitemmorehottips"
+	    android:textColor="@android:color/holo_blue_bright"
+	    />
+	     -->
+	     
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/fourbtnlinearlayout"
+	    android:layout_alignParentBottom="true">
+	    
+	    <ImageView 
+		    android:id="@+id/listitemline"
+		    android:layout_centerInParent="true"
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:background="#DCDCDC"
+		    android:contentDescription="itemdiv"
+		    /> 
+		<TextView 
+		    android:id="@+id/morehottv"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerInParent="true"
+		    android:paddingLeft="5dp"
+		    android:paddingRight="5dp"
+		    android:background="@android:color/background_light"
+		    android:text="@string/morehottips"
+		    android:textColor="#EEFF0000"/>
+	</RelativeLayout>
+</RelativeLayout>

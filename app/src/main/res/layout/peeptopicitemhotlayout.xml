@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/background_light"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/biumain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/topiccontent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:paddingRight="10dp"
+            android:textSize="@dimen/homeitemcontentsize" />
+        <!-- 图片是在内容和攒、踩按钮的下方 -->
+
+        <ImageView
+            android:id="@+id/topicimg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/topiccontent"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/publishplace"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/biumain"
+        android:focusable="false"
+        android:paddingTop="8dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp" />
+    <!-- 图片下面是发表时间之类的 -->
+
+    <LinearLayout
+        android:id="@+id/pubinfolayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/publishplace"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/create_at_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom|left"
+            android:paddingTop="6dp"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/reply_num_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom|left"
+            android:paddingTop="6dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/homeitemsubtextsize" />
+        <!-- 右边的三个按钮竖直平分所占用空间 -->
+
+        <RelativeLayout
+            android:id="@+id/topandtreadlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/likebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:background="#00000000"
+                android:paddingRight="15dp"
+                android:paddingTop="6dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/arrow1" />
+
+            <TextView
+                android:id="@+id/likecounttv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignTop="@id/likebtn"
+                android:layout_toLeftOf="@id/treadbtn"
+                android:layout_toRightOf="@id/likebtn"
+                android:gravity="center"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/treadbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:background="#00000000"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:paddingTop="6dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/arrow2" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 最下面，是显示分割线的，要用相对布局 -->
+
+    <RelativeLayout
+        android:id="@+id/bottomlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pubinfolayout"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <ImageView
+            android:id="@+id/listitemline"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="8dp"
+            android:background="#DCDCDC"
+            android:contentDescription="itemdiv" />
+
+        <TextView
+            android:id="@+id/morehottv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/background_light"
+            android:gravity="top"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/morehottips"
+            android:textColor="#EEFF0000" />
+    </RelativeLayout>
+
+</RelativeLayout>

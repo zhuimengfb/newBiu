@@ -1,0 +1,185 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/normal_toolbar_layout"/>
+    <!--<android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_publish"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:fillViewport="false"
+        android:gravity="center"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        >
+        </android.support.v7.widget.Toolbar>-->
+
+    <!--<include
+        android:id="@+id/tabtoplayout"
+        layout="@layout/publish_top_tab" />-->
+    <!-- 发表内容、字数，可能存在的图片 -->
+
+    <RelativeLayout
+        android:id="@+id/contentandimglayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_layout"
+        android:background="@color/white"
+        android:gravity="bottom" >
+
+        <EditText
+            android:id="@+id/publishcontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:background="@drawable/edit_background"
+            android:gravity="top"
+            android:hint="@string/defaultcontent"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:lineSpacingExtra="6.0dp"
+            android:minHeight="120dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/bigTitleColor"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="@dimen/bigTitleSize" />
+
+        <RelativeLayout
+            android:id="@+id/imgandcountlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/publishcontent">
+
+            <ImageView
+                android:id="@+id/imagetopublish"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="10dp"
+                android:visibility="visible" />
+
+            <com.biu.biu.tools.EditTextLengthIndicate
+                android:id="@+id/publishcontcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:text="200"
+                android:textColor="@color/bigTitleColor"
+                android:textSize="@dimen/tagSize" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/contentandimglayout">
+
+        <ImageView
+            android:id="@+id/addphoto"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/upload_picture_before"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="140dp"
+            />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addphoto"
+            android:text="@string/add_photo"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            />
+        <ImageView
+            android:id="@+id/iv_anonymity_publish"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/anonymity_before"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="140dp"
+            />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_anonymity_publish"
+            android:text="@string/anonymity_publish"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="140dp"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contentandimglayout"
+        android:background="@android:color/white"
+        android:gravity="bottom"
+        android:visibility="gone"
+        >
+
+        <ImageButton
+            android:id="@+id/addphoto1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="#00000000"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="1dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/camera" />
+
+        <CheckBox
+            android:id="@+id/showplacecheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/addphoto1"
+            android:button="@drawable/publishcheckbox_selector"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp" >
+        </CheckBox>
+
+        <TextView
+            android:id="@+id/publish_showplace"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/showplacecheck"
+            android:paddingTop="3dp"
+            android:text="@string/showmyplace"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="15sp" />
+    </RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_topic_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:rippleColor="@color/colorPrimaryDark"
+        android:src="@drawable/location_done_icon"
+        />
+
+</RelativeLayout>

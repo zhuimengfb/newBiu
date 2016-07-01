@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我评论的ListView项目的布局文件 -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="10dp">
+
+    <cn.bingoogolapple.badgeview.BGABadgeLinearLayout
+        android:id="@+id/myreplytar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:badge_horizontalMargin="8dp"
+        >
+
+        <TextView
+            android:id="@+id/myreplytimetv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="#00000000"
+            android:clickable="false"
+            android:focusable="false"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp" />
+        <!-- 标记帖子相关的新消息数目 -->
+
+        <TextView
+            android:id="@+id/titlenum_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shownum"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            android:visibility="gone" />
+    </cn.bingoogolapple.badgeview.BGABadgeLinearLayout>
+
+    <TextView
+        android:id="@+id/myreplycontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/myreplytar"
+        android:layout_below="@id/myreplytar"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="8dp"
+        android:textSize="@dimen/myreply_content_size" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myreplycontent"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="5dp"
+        android:background="#F5F5F5" >
+
+        <ImageView
+            android:id="@+id/quotation1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="quotation1"
+            android:src="@drawable/quotationmarks1" />
+
+        <TextView
+            android:id="@+id/myreplyiteminfotv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quotation1"
+            android:layout_toRightOf="@id/quotation1"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:textSize="@dimen/myreply_to_content_size" />
+
+        <ImageView
+            android:id="@+id/quotation2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myreplyiteminfotv"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="quotation2"
+            android:scaleType="fitEnd"
+            android:src="@drawable/quotationmarks2" />
+    </RelativeLayout>
+
+</RelativeLayout>

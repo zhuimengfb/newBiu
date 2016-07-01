@@ -1,0 +1,182 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_icon_outside"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/me_icon_bg1"/>
+
+            <ImageView
+                android:id="@+id/iv_user_icon"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_icon_outside"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/user_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/bigTitleSize"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="9"
+        android:background="#F0F0F2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="15dp">
+
+        <!-- 添加新消息 -->
+        <RelativeLayout
+            android:id="@+id/layout_my_publish"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_click_background"
+            android:gravity="center">
+
+            <cn.bingoogolapple.badgeview.BGABadgeFrameLayout
+                android:id="@+id/bga_me_publish_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:badge_horizontalMargin="8dp">
+
+                <TextView
+                    android:id="@+id/me_mypublish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="@string/me_mypublish"
+                    android:textColor="@color/smallTitleColor"
+                    android:textSize="@dimen/userNameSize"/>
+
+                <TextView
+                    android:id="@+id/mypublish_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:background="@drawable/shownum"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp"
+                    android:visibility="gone"/>
+            </cn.bingoogolapple.badgeview.BGABadgeFrameLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/divider"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_my_reply"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_click_background"
+            android:gravity="center">
+
+            <cn.bingoogolapple.badgeview.BGABadgeFrameLayout
+                android:id="@+id/bga_me_reply_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:badge_horizontalMargin="8dp"
+                >
+
+                <TextView
+                    android:id="@+id/me_myreply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:text="@string/me_myreply"
+                    android:textColor="@color/smallTitleColor"
+                    android:textSize="@dimen/userNameSize"/>
+
+                <TextView
+                    android:id="@+id/myreply_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:background="@drawable/shownum"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp"
+                    android:visibility="gone"/>
+            </cn.bingoogolapple.badgeview.BGABadgeFrameLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/divider"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_my_suggestion"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_click_background"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/me_mysuggestion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/me_suggestion"
+                android:textColor="@color/smallTitleColor"
+                android:textSize="@dimen/userNameSize"/>
+        </RelativeLayout>
+
+        <!-- 版本检测改为用户协议 -->
+        <include layout="@layout/divider"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_check_version"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layout_click_background"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/me_checkversion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/me_checkversion"
+                android:textColor="@color/smallTitleColor"
+                android:textSize="@dimen/userNameSize"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

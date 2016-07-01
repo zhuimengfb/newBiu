@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+    <com.camnter.easyrecyclerviewsidebar.EasyRecyclerViewSidebar
+        android:id="@+id/contact_sidebar"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center|end"
+        />
+
+    <RelativeLayout
+        android:id="@+id/section_layout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/timeColor"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/tv_section_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimary"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_nothing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rv_contact_list"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/iv_nothing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nothing"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_nothing"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:text="@string/no_friend_yet"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

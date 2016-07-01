@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayBackground"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/normal_toolbar_layout"/>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="121dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rl_setting_user_icon"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="@string/head_icon"
+                android:textColor="@color/bigTitleColor"
+                android:textSize="@dimen/bigTitleSize"/>
+
+            <ImageView
+                android:id="@+id/iv_set_user_icon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/user_icon"
+               />
+            <ProgressBar
+                android:id="@+id/pb_upload_head_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                style="?android:progressBarStyleInverse"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rv_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rl_setting_user_icon"
+            android:layout_marginLeft="15dp"
+            android:background="@color/grayBackground">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_setting_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/rv_divider"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="@string/user_name"
+                android:textColor="@color/bigTitleColor"
+                android:textSize="@dimen/bigTitleSize"/>
+
+            <ImageView
+                android:id="@+id/iv_right_flag"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_keyboard_arrow_right_48dp"/>
+
+            <TextView
+                android:id="@+id/tv_setting_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/iv_right_flag"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textColor="@color/smallTitleColor"
+                android:textSize="@dimen/bigTitleSize"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_setting_upload_picture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tv_upload_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="@string/upload_picture"
+                android:textColor="@color/bigTitleColor"
+                android:textSize="@dimen/bigTitleSize"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_marginLeft="15dp"
+                android:textSize="@dimen/tagSize"
+                android:text="@string/long_click_delete"
+                android:layout_below="@id/tv_upload_pic"
+                />
+            <ProgressBar
+                android:id="@+id/pb_upload_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                style="?android:progressBarStyleInverse"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rv_divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/grayBackground">
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/gv_user_picture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</LinearLayout>

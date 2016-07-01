@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/umeng_fb_gray"
+     >
+    <LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:background="#00000000"
+	    style="?android:attr/buttonBarStyle">
+		<TextView
+		    android:layout_height="wrap_content"
+		    android:layout_width="fill_parent"
+		    android:text="@string/peep_new"/>
+		<com.biu.biu.tools.AutoListView 
+		    android:id="@+id/peep_listview"
+		    android:layout_height="wrap_content"
+		    android:layout_width="fill_parent">
+		</com.biu.biu.tools.AutoListView>
+	</LinearLayout>
+</RelativeLayout>

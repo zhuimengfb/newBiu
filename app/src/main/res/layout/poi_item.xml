@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/umeng_fb_white"
+    android:paddingBottom="10dp"
+    android:paddingLeft="15dp"
+    android:paddingTop="10dp" >
+
+    <TextView
+        android:id="@+id/poi_each_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="12"
+        android:background="@color/umeng_fb_white"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:paddingBottom="1dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="1dp"
+        android:paddingTop="1dp"
+        android:textSize="@dimen/peeptopicitemtextsize" />
+
+    <ImageButton
+        android:id="@+id/poi_item_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/poi_each_item"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="#00000000"
+        android:paddingBottom="1dp"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:paddingTop="1dp"
+        android:src="@drawable/x"
+        android:visibility="visible" />
+
+</LinearLayout>

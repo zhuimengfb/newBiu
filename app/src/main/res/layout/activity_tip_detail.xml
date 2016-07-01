@@ -1,0 +1,207 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    tools:context="${relativePackage}.${activityClass}" >
+
+   <!-- 标题栏 -->
+   <include 
+       android:id="@+id/taptop"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       layout="@layout/tipdetail_top_tab"
+       />
+
+   <!-- 目标帖子的内容 -->
+   <!-- 2015年7月8日：将目标帖子部分内容修改为listview的第一项<RelativeLayout
+       android:id="@+id/tipmaininfo"
+       android:paddingTop="2dp"
+       android:layout_below="@id/taptop"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+     >
+     
+    被回复帖子内容
+	<TextView 
+    	android:id="@+id/tipcontent"
+    	android:focusable="false"
+    	android:clickable="false"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:textSize="@dimen/homeitemcontentsize"
+    	android:background="#00000000"
+    	android:paddingBottom="10dp"
+    	android:paddingLeft="10dp"
+    	android:paddingRight="10dp"
+    	/>
+	被回复帖子发表位置
+	<TextView
+	    android:id="@+id/publishplace"
+	    android:layout_height="wrap_content"
+	    android:layout_width="fill_parent"
+	    android:layout_below="@id/tipcontent"
+	    android:textSize="12sp"
+	    android:textColor="@android:color/darker_gray"
+	    android:background="#00000000"
+	    android:paddingLeft="10dp"
+	    />
+	
+	目标帖子的发表时间和回复、顶、赞条数
+	<RelativeLayout
+	    android:id="@+id/fourcontrolrellayout"
+	    android:layout_height="wrap_content"
+	    android:background="#00000000"
+	    android:layout_width="fill_parent"
+	    android:layout_below="@id/publishplace"
+	    android:paddingTop="2dp" 
+	    >
+	    发表时间图标，与父布局左对齐
+	    <ImageView
+	        android:id="@+id/pub_timeimg"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:src="@drawable/home_icon1"
+	        android:layout_marginLeft="10dp"
+	        android:adjustViewBounds="true"
+	        android:layout_alignParentLeft="true"
+	        android:background="#00000000"/>
+	    发表时间文本
+	    <TextView 
+	        android:id="@+id/pub_timetxv"
+	        android:layout_toRightOf="@id/pub_timeimg"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:textSize="@dimen/homeitemsubtextsize"
+	        android:layout_marginLeft="3dp"/>
+	     踩的次数文本
+	    <TextView
+        	android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:id="@+id/downcounttv"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="40dp"
+	        android:textSize="@dimen/homeitemsubtextsize"/>
+	     踩的按钮，在文本的左边
+	    <ImageButton 
+	    	android:id="@+id/downbtn"
+	    	android:layout_toLeftOf="@id/downcounttv"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:src="@drawable/home_icon4"
+	        android:adjustViewBounds="true"
+	        android:paddingLeft="20dp"
+	        android:paddingRight="5dp"
+	        android:layout_marginLeft="10dp"
+	        android:scaleType="fitCenter"
+	        android:background="#00000000"/>
+	     顶的文本，在踩按钮的左边
+	    <TextView
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:id="@+id/topcounttv"
+	        android:layout_toLeftOf="@id/downbtn"
+	        android:layout_marginRight="10dp"
+	        android:textSize="@dimen/homeitemsubtextsize"/>
+	     顶的按钮，在顶文本的左边
+	    <ImageButton 
+	        android:id="@+id/topbtn"
+	        android:layout_toLeftOf="@id/topcounttv"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:src="@drawable/home_icon3"
+	        android:adjustViewBounds="true"
+	        android:layout_gravity="top"
+	        android:layout_marginLeft="15dp"
+	        android:paddingLeft="20dp"
+	        android:paddingRight="5dp"
+	        android:background="#00000000" />
+	    回复的文本和图标
+	    
+	    <ImageButton
+	        android:id="@+id/replyimage"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:layout_toRightOf="@id/pub_timetxv"
+	        android:src="@drawable/home_icon2"
+	        android:layout_marginLeft="10dp"
+	        android:adjustViewBounds="true"
+	        android:background="#00000000"/>
+	    <TextView
+	        android:id="@+id/replynumtv"
+	        android:layout_toRightOf="@id/replyimage"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:textSize="@dimen/homeitemsubtextsize"/>
+	</RelativeLayout>
+	<Spinner 
+       android:id="@+id/topspinner"
+       android:layout_below="@id/fourcontrolrellayout"
+       android:layout_height="2dp"
+       android:layout_width="fill_parent"
+       android:background="@color/umeng_fb_gray"/>
+</RelativeLayout> -->
+
+   
+   
+   
+   <!-- 最下面的“点此评论”相关 -->
+   <LinearLayout 
+       android:id="@+id/bottomlinearlayout"
+       android:layout_height="wrap_content"
+       android:layout_width="fill_parent"
+       android:layout_alignParentBottom="true"
+       android:background="@android:color/white"
+       android:orientation="horizontal"
+        >
+       <LinearLayout
+           android:layout_height="fill_parent"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:background="#F2F2F2"
+           android:gravity="center_horizontal">
+           <EditText
+           android:id="@+id/myreplyedit"
+           android:hint="@string/pushtoreply"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:maxLength="200"
+           android:layout_marginLeft="10dp"
+           
+           />
+       </LinearLayout>
+       <LinearLayout
+           android:layout_height="fill_parent"
+           android:layout_width="wrap_content"
+           android:gravity="center"
+           android:paddingBottom="5dp"
+           >
+           <ImageButton 
+           android:id="@+id/sendreplybtn"
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:src="@drawable/button"
+           android:text="@string/send"
+           android:background="#00000000"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           />
+       </LinearLayout>
+   </LinearLayout>
+   
+   
+   <ListView 
+       android:id="@+id/replylistview"
+       android:layout_height="wrap_content"
+       android:layout_width="fill_parent"
+       android:layout_below="@id/taptop"
+       android:layout_above="@id/bottomlinearlayout"
+       android:layout_marginBottom="15dp"
+       android:background="@android:color/white"
+       >
+       
+   </ListView>
+   
+   
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.bingoogolapple.badgeview.BGABadgeRelativeLayout
+    android:id="@+id/topic_status_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/background_light"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    app:badge_horizontalMargin="8dp"
+    >
+
+    <ImageView
+        android:id="@+id/status_topic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingBottom="10dp"
+        android:paddingTop="15dp"
+        android:src="@drawable/status"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/peeplistitem_topic"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/status_topic"
+        android:background="#00000000"
+        android:focusable="false"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="@dimen/peeptopicitemtextsize" />
+
+
+</cn.bingoogolapple.badgeview.BGABadgeRelativeLayout>

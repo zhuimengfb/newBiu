@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="homeitemsubtextsize">10sp</dimen>
+    <dimen name="homeitemcontentsize">18sp</dimen>
+    <dimen name="homeitemmorehottips">15sp</dimen>
+    <!-- peepfragmen标题大小 -->
+    <dimen name="peepitemtextsize">15sp</dimen>
+    <!-- peep子标题大小 -->
+    <dimen name="peepitemsubtitlesize">13sp</dimen>
+    <!-- peep话题项字体大小 -->
+    <dimen name="peeptopicitemtextsize">13sp</dimen>
+    <!-- 兴趣搜索页面编辑框的字体大小 -->
+    <dimen name="poi_edittext_size">15sp</dimen>
+    <!-- top标题字体 -->
+    <dimen name="top_center_size">13sp</dimen>
+    <!-- me页面小标题字体大小 -->
+    <dimen name="me_title_size">13sp</dimen>
+    <!-- 地图兴趣点搜索页面标题字体大小 -->
+    <dimen name="biumap__title_size">13sp</dimen>
+
+    <!-- 我的回复页面回复内容的字体大小 -->
+    <dimen name="myreply_content_size">13sp</dimen>
+    <!-- 我的回复页面回复内容的字体大小 -->
+    <dimen name="myreply_to_content_size">13sp</dimen>
+    <!-- 我的发表 页面发表内容的字体大小
+     -->
+<dimen name="mypublish_content_size">13sp</dimen>
+</resources>

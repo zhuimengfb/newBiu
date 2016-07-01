@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <com.biu.biu.tools.AutoListView
+        android:id="@+id/morehotlistview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:divider="@null" />
+    <RelativeLayout
+        android:id="@+id/rl_nothing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+            android:id="@+id/iv_no_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/no_publish"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_no_publish"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="@string/no_hot_topic"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

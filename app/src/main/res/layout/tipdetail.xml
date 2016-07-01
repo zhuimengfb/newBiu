@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="80dp"
+    
+     >
+     
+    <!-- 2015年4月20日，使用相对布局，改写原布局 -->
+    
+    
+    <!-- 这是原来的布局 -->
+	<TextView 
+    	android:id="@+id/tipcontent"
+    	android:focusable="false"
+    	android:clickable="false"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:textSize="@dimen/homeitemcontentsize"
+    	android:background="#00000000"
+    	android:paddingBottom="35dp"
+    	android:paddingLeft="10dp"
+    	android:paddingRight="10dp"
+    	/>
+	
+	
+	
+	<RelativeLayout
+	    android:layout_height="wrap_content"
+	    android:background="#00000000"
+	    android:layout_width="fill_parent"
+	    android:layout_alignParentBottom="true"
+	    android:paddingLeft="10dp"
+	    android:paddingTop="2dp"
+	    android:layout_below="@id/tipcontent" 
+	    >
+	    <!-- 发表时间图标，与父布局左对齐 -->
+	    <ImageView 
+	        android:id="@+id/pub_timeimg"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:src="@drawable/home_icon1"
+	        android:scaleType="fitCenter"
+	        android:adjustViewBounds="true"
+	        android:layout_alignParentLeft="true"
+	        android:background="#00000000"/>
+	    <!-- 发表时间文本 -->
+	    <TextView 
+	        android:id="@+id/pub_timetxv"
+	        android:layout_toRightOf="@id/pub_timeimg"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:textSize="@dimen/homeitemsubtextsize"
+	        android:layout_marginLeft="3dp"/>
+	    <!--  踩的次数文本-->
+	    <TextView
+        	android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:id="@+id/downcounttv"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="40dp"
+	        android:textSize="@dimen/homeitemsubtextsize"/>
+	    <!--  踩的按钮，在文本的左边-->
+	    <ImageButton 
+	    	android:id="@+id/downbtn"
+	    	android:layout_toLeftOf="@id/downcounttv"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:src="@drawable/home_icon4"
+	        android:adjustViewBounds="true"
+	        android:layout_gravity="bottom"
+	        android:paddingLeft="20dp"
+	        android:paddingRight="5dp"
+	        android:layout_marginLeft="10dp"
+	        android:background="#00000000"/>
+	    <!--  顶的文本，在踩按钮的左边-->
+	    <TextView
+	        android:id="@+id/topcounttv"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:layout_toLeftOf="@id/downbtn"
+	        android:layout_marginRight="10dp"
+	        android:textSize="@dimen/homeitemsubtextsize"/>
+	    <!--  顶的按钮，在顶文本的左边-->
+	    <LinearLayout 
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:layout_toLeftOf="@id/topcounttv"
+	        android:orientation="horizontal">
+	        
+	    
+	    <ImageButton 
+	        android:id="@+id/topbtn"
+	        
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:src="@drawable/home_icon3"
+	        android:adjustViewBounds="true"
+	        android:layout_gravity="top"
+	        android:paddingLeft="35dp"
+	        android:paddingRight="5dp"
+	        android:scaleType="fitStart"
+	        android:background="#00000000" />
+	    </LinearLayout>
+	    <!-- 回复的文本和图标 -->
+	    <ImageButton
+	        android:id="@+id/replyimage"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:layout_toRightOf="@id/pub_timetxv"
+	        android:src="@drawable/home_icon2"
+	        android:layout_marginLeft="10dp"
+	        android:adjustViewBounds="true"
+	        android:background="#00000000"
+	        android:clickable="false"
+	        android:visibility="invisible"/>
+	    <TextView
+	        android:id="@+id/replynumtv"
+	        android:layout_toRightOf="@id/replyimage"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:visibility="invisible"
+	        android:textSize="@dimen/homeitemsubtextsize"/>
+	    	
+	</RelativeLayout>
+	<!-- 
+	<LinearLayout 
+	    android:layout_height="wrap_content"
+	    android:layout_width="fill_parent"
+	    android:layout_below="@id/tipcontent"
+	    android:gravity="bottom"
+	    >
+	    
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_weight="1"
+	        android:paddingLeft="10dp"
+	        android:paddingTop="20dp"
+	        android:paddingBottom="14dp"
+	        >
+	         <ImageButton
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:src="@drawable/home_icon1"
+	        android:id="@+id/pub_timeimg"
+	        android:adjustViewBounds="true"
+	        android:maxWidth="46dp"
+	        android:maxHeight="46dp"
+	        android:scaleType="fitCenter"
+	        android:background="#00000000"
+	        />
+	    <TextView 
+	        android:id="@+id/pub_timetxv"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:textSize="@dimen/homeitemsubtextsize"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="3dp"/>
+	    </LinearLayout>
+	   
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_weight="1"
+	        android:paddingLeft="10dp"
+	        android:paddingTop="20dp"
+	        android:paddingBottom="14dp">
+	    	<ImageButton
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:src="@drawable/home_icon2"
+	        android:adjustViewBounds="true"
+	        android:maxWidth="46dp"
+	        android:maxHeight="46dp"
+	        android:scaleType="fitCenter"
+	        android:background="#00000000"
+	        android:clickable="false"
+	        android:visibility="invisible"/>
+	    	<TextView
+	        android:id="@+id/replynumtv"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:textSize="@dimen/homeitemsubtextsize"
+	        android:visibility="invisible"/>
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_weight="1"
+	        android:paddingLeft="10dp"
+	        android:paddingTop="20dp"
+	        android:paddingBottom="14dp">
+	        <ImageButton 
+	        android:id="@+id/topbtn"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:src="@drawable/home_icon3"
+	        android:adjustViewBounds="true"
+	        android:layout_gravity="top"
+	        android:maxWidth="46dp"
+	        android:maxHeight="46dp"
+	        android:scaleType="fitCenter"
+	        android:background="#00000000" />
+	    	<TextView
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:id="@+id/topcounttv"
+	        android:layout_marginLeft="3dp"
+	        android:layout_gravity="center_vertical"
+	        android:textSize="@dimen/homeitemsubtextsize"/>
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_weight="1"
+	        android:paddingLeft="10dp"
+	        android:paddingTop="20dp"
+	        android:paddingBottom="14dp">
+	    	
+	    	<ImageButton 
+	    	android:id="@+id/downbtn"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:src="@drawable/home_icon4"
+	        android:adjustViewBounds="true"
+	        android:maxWidth="46dp"
+	        android:maxHeight="46dp"
+	        android:layout_gravity="bottom"
+	        android:scaleType="fitCenter"
+	        android:background="#00000000"/>
+	    	<TextView
+        	android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:id="@+id/downcounttv"
+	        android:layout_marginLeft="3dp"
+	        android:layout_gravity="center_vertical"
+	        android:textSize="@dimen/homeitemsubtextsize"/>
+	    </LinearLayout>
+	</LinearLayout>
+ -->
+</RelativeLayout>

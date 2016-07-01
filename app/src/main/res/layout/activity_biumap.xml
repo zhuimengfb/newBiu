@@ -1,0 +1,103 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/normal_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:titleTextColor="@color/white"
+            android:fillViewport="false"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/location"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <android.support.v7.widget.SearchView
+                android:id="@+id/search_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                >
+            </android.support.v7.widget.SearchView>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    <!-- 标题栏 -->
+    <!--<include
+        android:id="@+id/toolbar_include"
+        layout="@layout/normal_toolbar"
+        />-->
+
+  <!--  <include
+        android:id="@+id/maptop"
+        layout="@layout/biumap_top_bar"
+        />-->
+
+    <LinearLayout
+        android:id="@+id/maparea"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/normal_toolbar"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true" >
+
+            <!-- 百度地图视图空间 -->
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/biumapview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:clickable="true" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/umeng_fb_white"
+                android:orientation="vertical" >
+
+                <!-- 显示动态查询的结果列表 -->
+
+                <ListView
+                    android:id="@+id/showResult"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" >
+                </ListView>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_location_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50dp"
+        app:rippleColor="@color/colorPrimaryDark"
+        android:src="@drawable/location_done_icon"
+        />
+
+</RelativeLayout>

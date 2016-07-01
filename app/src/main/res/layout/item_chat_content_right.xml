@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_message_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/tagSize"
+        android:textColor="@color/timeColor"
+        android:text="@string/time"
+        />
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp">
+
+        <ImageView
+            android:id="@+id/iv_chat_user_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            />
+        <com.rockerhieu.emojicon.EmojiconTextView
+            android:id="@+id/tv_chat_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/iv_chat_user_icon"
+            android:minHeight="36dp"
+            android:minWidth="50dp"
+            android:gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/bigTitleSize"
+            android:background="@drawable/chat_item_right"
+            android:visibility="gone"
+            />
+            <ImageView
+                android:id="@+id/iv_chat_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_toLeftOf="@id/iv_chat_user_icon"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="10dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:scaleType="centerInside"
+                />
+    </RelativeLayout>
+</LinearLayout>

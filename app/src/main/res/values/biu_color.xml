@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="biu_main_menu_color">#2E2E2E</color>
+    <color name="biu_main_color">#26D5B6</color>
+	<color name="biu_font_white">#FFFFFF</color>
+</resources>

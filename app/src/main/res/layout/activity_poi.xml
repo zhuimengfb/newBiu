@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:fillViewport="false"
+        android:gravity="center"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        >
+    </android.support.v7.widget.Toolbar>
+            <include
+                android:id="@+id/toolbar_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_centerInParent="true"
+                layout="@layout/toolbar_tab"
+                />
+    </RelativeLayout>
+<!--
+    <include
+        android:id="@+id/poi_top_bar"
+        layout="@layout/poi_top_bar" />-->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 定义是否保存当前位置及描述信息 -->
+
+        <LinearLayout
+            android:id="@+id/save_description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <!-- 此处定义用户的收藏信息 -->
+
+            <TextView
+                android:id="@+id/poi_place_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:paddingBottom="10dp"
+                android:paddingLeft="6dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:text="@string/poi_place_show"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/poi_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/poi_save"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/poi_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

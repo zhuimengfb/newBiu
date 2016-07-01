@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <!-- <TextView
+        android:id="@+id/noinfotv"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:textColor="@color/umeng_fb_lightblue"
+        android:text="@string/nomoonbox"
+        android:textSize="18sp"
+        android:padding="5dp"
+        android:visibility="gone">
+        
+    </TextView> -->
+        
+  	<com.biu.biu.tools.AutoListView 
+    android:layout_above="@id/sperateline"
+   	android:id="@+id/frgmoonbox_lv"
+   	android:layout_width="fill_parent"
+   	android:layout_height="fill_parent">
+	</com.biu.biu.tools.AutoListView>	
+
+</RelativeLayout>

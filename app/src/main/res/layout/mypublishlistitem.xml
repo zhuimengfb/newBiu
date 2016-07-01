@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我发表的ListView项目的布局文件 -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="15dp" >
+
+    <cn.bingoogolapple.badgeview.BGABadgeLinearLayout
+        android:id="@+id/mypublishtar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:badge_horizontalMargin="8dp"
+        >
+
+        <TextView
+            android:id="@+id/mypubitemtimetv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="#00000000"
+            android:textColor="@color/timeColor"
+            android:textSize="@dimen/tagSize" />
+
+        <TextView
+            android:id="@+id/titlenum_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shownum"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            android:visibility="gone" />
+    </cn.bingoogolapple.badgeview.BGABadgeLinearLayout>
+
+    <TextView
+        android:id="@+id/mypubitemcontenttv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mypublishtar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/dialog3"
+        android:gravity="left"
+        android:paddingBottom="18dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp"
+        android:textSize="@dimen/mypublish_content_size" />
+
+</RelativeLayout>

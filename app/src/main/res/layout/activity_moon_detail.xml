@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <!-- 标题栏 -->
+   	<include 
+   	    android:id="@+id/taptop"
+       	android:layout_width="fill_parent"
+       	android:layout_height="wrap_content"
+       	layout="@layout/tipdetail_top_tab"/>
+    
+   	<TextView 
+    	android:id="@+id/tipcontent"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:textSize="@dimen/homeitemcontentsize"
+    	android:background="#00000000"
+    	android:paddingTop="5dp"
+    	android:paddingBottom="25dp"
+    	android:paddingRight="10dp"
+    	/>
+	<RelativeLayout
+	    android:id="@+id/foucontrolrelayout"
+	    android:layout_below="@id/tipcontent" 
+	    android:layout_height="wrap_content"
+	    android:layout_width="fill_parent">
+	    <TextView 
+	       	android:id="@+id/replynumtv"
+	       	android:layout_centerHorizontal="true"
+	       	android:layout_height="wrap_content"
+      	 	android:layout_width="wrap_content"
+	       	android:textSize="@dimen/homeitemsubtextsize"/>
+	    
+	    <TextView 
+	        android:id="@+id/pub_timetxv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="@dimen/homeitemsubtextsize"
+	        android:layout_alignParentLeft="true"/>
+	    
+	</RelativeLayout>
+   	
+    <!-- 最下面的“点此评论”相关 -->
+   <LinearLayout 
+       android:id="@+id/bottomlinearlayout"
+       android:layout_height="50dp"
+       android:layout_width="fill_parent"
+       android:layout_alignParentBottom="true"
+       android:background="@android:color/white"
+       android:orientation="horizontal"
+        >
+       <LinearLayout
+           android:layout_height="fill_parent"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:background="#F2F2F2"
+           android:gravity="center_vertical">
+           <EditText
+           android:id="@+id/myreplyedit"
+           android:hint="@string/pushtoreply"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="10dp"
+           
+           />
+       </LinearLayout>
+       <LinearLayout
+           android:layout_height="fill_parent"
+           android:layout_width="wrap_content"
+           android:gravity="center"
+           android:paddingBottom="5dp"
+           >
+           <ImageButton 
+           android:id="@+id/sendreplybtn"
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:src="@drawable/button"
+           android:text="@string/send"
+           android:background="#00000000"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           />
+       </LinearLayout>
+   </LinearLayout>
+   
+   
+   <ListView 
+       android:id="@+id/replylistview"
+       android:layout_height="wrap_content"
+       android:layout_width="fill_parent"
+       android:layout_below="@id/foucontrolrelayout"
+       android:layout_marginBottom="10dp"
+       android:background="@android:color/white"
+       android:layout_above="@id/bottomlinearlayout"
+       >
+       
+   </ListView>
+
+</RelativeLayout>
